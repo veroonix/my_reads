@@ -1,0 +1,221 @@
+/* styles/BookPage.css */
+.book-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.back-button:hover {
+  background: #f5f6fa;
+  transform: translateX(-3px);
+}
+
+.book-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.book-header img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.book-info h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+  color: #2c3e50;
+}
+
+.authors {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin: 0 0 1rem;
+}
+
+.status {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background: #3498db;
+  color: white;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.reviews-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.review-form {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.rating {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.rating button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #bdc3c7;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.rating button.active {
+  color: #f1c40f;
+}
+
+.rating button:hover {
+  transform: scale(1.2);
+}
+
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  min-height: 120px;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Только для кнопки в форме отзыва */
+.submit-review-btn {
+  background: #27ae60;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-review-btn:hover {
+  background: #219a52;
+}
+
+button.delete {
+  background: #e74c3c;
+  color: white;
+}
+
+button.delete:hover {
+  background: #c0392b;
+}
+
+.reviews-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.review-card {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.user {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.stars {
+  color: #f1c40f;
+  font-size: 1.2rem;
+}
+
+.review-text {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+time {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.delete-book {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-book:hover {
+  background: #c0392b;
+}
+
+.error {
+  color: #e74c3c;
+  padding: 1rem;
+  background: #fdeded;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .book-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-header img {
+    max-width: 200px;
+  }
+
+  .book-info h1 {
+    font-size: 2rem;
+  }
+}

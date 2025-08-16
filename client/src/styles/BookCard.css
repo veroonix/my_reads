@@ -1,0 +1,243 @@
+/* BookCard.css */
+
+
+
+/* Search form */
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  width: 60%;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #2980b9;
+}
+
+/* Books grid */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Book card */
+.book-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-cover {
+  height: 200px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-cover img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.no-cover {
+  color: #777;
+  font-size: 14px;
+}
+
+.book-details {
+  padding: 15px;
+}
+
+.book-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #2c3e50;
+  line-height: 1.3;
+  height: 2.6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.book-authors {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+
+.book-rating {
+  color: #f39c12;
+  font-weight: bold;
+  margin: 0 0 12px;
+}
+
+/* Book status badges */
+.book-status {
+  margin-top: 10px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Specific status colors */
+.status-badge.planned {
+  background-color: #3498db; /* Blue for planned */
+}
+
+.status-badge.reading {
+  background-color: #2ecc71; /* Green for reading */
+}
+
+.status-badge.finished {
+  background-color: #9b59b6; /* Purple for finished */
+}
+
+.status-badge.favourites {
+  background-color: #e74c3c; /* Red for favorites */
+}
+
+/* Book actions */
+.book-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.action-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  color: white;
+}
+
+.action-btn:hover {
+  opacity: 0.9;
+}
+
+.action-btn.planned {
+  background-color: #3498db;
+}
+
+.action-btn.reading {
+  background-color: #2ecc71;
+}
+
+.action-btn.finished {
+  background-color: #9b59b6;
+}
+
+.action-btn.favourites {
+  background-color: #e74c3c;
+}
+
+/* Loading and messages */
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 40px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.no-results, .error-message {
+  text-align: center;
+  padding: 20px;
+  color: #7f8c8d;
+  font-size: 18px;
+}
+
+.error-message {
+  color: #e74c3c;
+}
+
+/* BookCard.css */
+.status-control {
+  margin-top: 15px;
+}
+
+.status-select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.status-select:hover {
+  border-color: #888;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.2);
+}
+
+.book-card-content {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+}
+
+.book-card-content:hover .book-title {
+  color: #1a73e8; /* Пример hover-эффекта */
+}

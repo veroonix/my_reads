@@ -1,0 +1,100 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1000;
+}
+
+.logo-link {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo-link:hover {
+  color: #3498db;
+}
+
+.main-nav {
+  flex: 1;
+  margin: 0 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.nav-link {
+  color: #34495e;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #3498db;
+  background: #f8f9fa;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #3498db;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.auth-button {
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.login {
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.login:hover {
+  background: #3498db;
+  color: white;
+}
+
+.register {
+  background: #3498db;
+  color: white;
+  border: 2px solid transparent;
+}
+
+.register:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
